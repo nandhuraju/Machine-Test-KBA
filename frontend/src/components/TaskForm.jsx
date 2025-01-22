@@ -5,8 +5,8 @@ import axios from "axios";
 const AddTask = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-    const [status, setStatus] = useState("");
-    const [priority, setPriority] = useState("");
+    const [status, setStatus] = useState("pending");
+    const [priority, setPriority] = useState("medium");
     // const [createdAt, setCreatedAt] = useState("");
 
   const handleSubmit = async (e) => {
