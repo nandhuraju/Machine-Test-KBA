@@ -7,7 +7,7 @@ const AddTask = () => {
   const [description, setDescription] = useState("");
     const [status, setStatus] = useState("pending");
     const [priority, setPriority] = useState("medium");
-    // const [createdAt, setCreatedAt] = useState("");
+    const [createdAt, setCreatedAt] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,7 +17,7 @@ const AddTask = () => {
         description,
         status,
         priority,
-        // createdAt
+        createdAt
     };
 
     try {
@@ -31,7 +31,7 @@ const AddTask = () => {
       setDescription("");
         setStatus("");
         setPriority("");
-        // setCreatedAt("");
+        setCreatedAt("");
     } catch (error) {
       console.error("Error adding Task:", error);
     }
@@ -78,7 +78,7 @@ const AddTask = () => {
               required
             />
           </div>
-          {/* <div>
+          <div>
             <label>Date:</label>
             <input
               type="date"
@@ -86,7 +86,7 @@ const AddTask = () => {
               onChange={(e) => setCreatedAt(e.target.value)}
               required
             />
-          </div> */}
+          </div>
 
           <button type="submit">Add task</button>
         </form>
